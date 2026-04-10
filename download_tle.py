@@ -35,8 +35,8 @@ def main():
 
             # Retrieve the satellite name from the first line of the TLE data
             satellite_name = tle_lines[0].strip()
-            # replace spaces in the satellite name with underscores
-            satellite_name = satellite_name.replace(" ", "_")
+            # replace spaces in the satellite name with hyphens
+            satellite_name = satellite_name.replace(" ", "-")
 
             # Save the TLE data to a file named after the satellite name
             with open(f"{satellite_name}_{satellite_id}.tle", "w") as f:
