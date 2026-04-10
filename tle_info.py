@@ -7,11 +7,9 @@ import sys
 # Suppress FutureWarning from TudatPy
 import warnings
 
-warnings.filterwarnings(
-    "ignore", category=FutureWarning, module="tudatpy.numerical_simulation"
-)
+warnings.filterwarnings("ignore", module="urllib3")
 
-from tudatpy.numerical_simulation import environment
+from tudatpy.dynamics import environment
 from tudatpy.astro.time_representation import DateTime
 
 
