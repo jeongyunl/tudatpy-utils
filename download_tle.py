@@ -10,9 +10,11 @@ def main():
         sys.exit(1)
 
     satellite_ids = sys.argv[1:]
-    print(f"Satellite IDs: {satellite_ids}")
+    print(f"Satellite IDs: {satellite_ids}\n")
 
     for satellite_id in satellite_ids:
+        print(f"Downloading TLE for {satellite_id}")
+
         # Encode satellite ID for URL
         import urllib.parse
 
@@ -23,7 +25,6 @@ def main():
         try:
             import urllib.request
 
-            filename = f"{satellite_id}_tle.txt"
             # Download the TLE data into a variable
             tle_data = urllib.request.urlopen(url).read()
             # Read the first line of the TLE data
