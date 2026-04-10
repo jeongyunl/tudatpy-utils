@@ -43,7 +43,13 @@ def main():
                 # Write the second and third lines of the TLE data to the file
                 f.write(tle_lines[1] + "\n")
                 f.write(tle_lines[2] + "\n")
+                f.close()
+
             print(f"Downloaded TLE for {satellite_name} ({satellite_id})")
+
+            # Break the line after each TLE file
+            print()
+
         except Exception as e:
             print(f"Error downloading TLE for {satellite_id}: {e}")
 
