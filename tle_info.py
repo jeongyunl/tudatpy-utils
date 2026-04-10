@@ -21,9 +21,11 @@ def main():
         sys.exit(1)
 
     tle_files = sys.argv[1:]
-    print(f"TLE files: {tle_files}")
+    print(f"TLE files: {tle_files}\n")
 
     for tle_file in tle_files:
+        print(f"Loading TLE file: {tle_file}")
+
         try:
             # Load the TLE file into a variable
             with open(tle_file, "r") as f:
